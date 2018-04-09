@@ -1,0 +1,38 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="p5js-temp-sketch_180409c5812723659740135894.js"></script>
+  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+  <style> 
+  var y = 0;
+var x =0;
+var spacing = 20;
+
+function setup() {
+  createCanvas(400, 400);
+  background(0);
+}
+function draw() {
+  stroke(255);
+  if (random(1) < 0.5) {
+    line(x, y, x + spacing, y+ spacing);
+  } else {
+
+    line(x, y + spacing, x + spacing, y);
+  }
+  x += spacing;
+  if (x>width) {
+    x = 0;
+    y+= spacing;
+  }
+}
+
+</style>
+</head>
+
+<body>
+</body>
+</html>
